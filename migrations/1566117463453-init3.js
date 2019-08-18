@@ -7,3 +7,4 @@ module.exports.up = async () => {
 module.exports.down = async () => {
   console.log('init3 down');
 };
+

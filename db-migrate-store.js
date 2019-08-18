@@ -57,13 +57,11 @@ class DbStore {
       const db = await bootstrap();
       const collection = db.collection('migrations');
 
-      console.log(set.store);
 
       await collection.deleteMany();
       const objectsToInsert = [];
       set.migrations.forEach(mutations => {
         if (!mutations.timestamp) return;
-        console.log(mutations.down.toString());
         objectsToInsert.push({
           ...mutations,
           down: mutations.down.toString(),
