@@ -1,0 +1,19 @@
+{
+  "name": "migrate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "maxsim <max.hubin@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.1.0",
+    "migrate": "^1.6.2",
+    "mongodb": "^3.3.0"
+  },
+  "scripts": {
+    "list": "migrate list --store='./db-migrate-store.js'",
+    "up": "migrate up --store='./db-migrate-store.js'",
+    "down": "migrate down --store='./db-migrate-store.js'",
+    "create": "migrate create --store='./db-migrate-store.js'",
+    "sync": "node migrate"
+  }
+}
